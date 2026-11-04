@@ -5,8 +5,8 @@
         "category": "relay",
         "arch": "beken",
         "mcu": "BK7231N",
-        "image": "beken-cb3s-rf",
-        "notes": "433 MHz receiver data on P26, decoded by rc-switch, only in the beken-cb3s-rf image. P6 is the 'total' (all on / off) button of the stock firmware. Verified on real hardware.",
+        "image": "beken-bk7231n",
+        "notes": "433 MHz receiver data on P26, decoded by rc-switch (in the beken-bk7231n image). P6 is the 'total' (all on / off) button of the stock firmware. Verified on real hardware.",
         "settings": {
             "relayGpio0": "24",
             "relayType0": "normal",
@@ -34,7 +34,7 @@
         "category": "switch",
         "arch": "beken",
         "mcu": "BK7231N",
-        "image": "cbu-generic",
+        "image": "beken-bk7231n",
         "notes": "Relay 1 is on RX1 (P10) and the LED on TX1 (P11), so UART0 is turned off (uartTx0 / uartRx0 153 = no pin) and there is no serial terminal. Wall switches on P6..P9 toggle their relay on every change of position, P23 is the on-board button. Pins from the stock Tuya config. Verified on real hardware.",
         "settings": {
             "relayGpio0": "10",
@@ -93,8 +93,8 @@
         "category": "relay",
         "arch": "beken",
         "mcu": "BK7231N",
-        "image": "xh-cb2s-generic",
-        "notes": "BK7231M: flash not encrypted (zero key) and the 4 MiB bootloader layout, needs the xh-cb2s-generic image. S1 is tied to N (non-isolated): flash it only without mains. K1 = P7 controls the relay, S1/S2 terminals = P26 toggle the dummy relay (relay 1, counted from 0), a second wall switch on the P21 test pad (not a module pin, through 1-4.7 kOhm to S1) toggles the relay. Verified on real hardware.",
+        "image": "beken-bk7231n-nokey",
+        "notes": "BK7231M: flash not encrypted (zero key) and the 4 MiB bootloader layout, needs the beken-bk7231n-nokey image. S1 is tied to N (non-isolated): flash it only without mains. K1 = P7 controls the relay, S1/S2 terminals = P26 toggle the dummy relay (relay 1, counted from 0), a second wall switch on the P21 test pad (not a module pin, through 1-4.7 kOhm to S1) toggles the relay. Verified on real hardware.",
         "settings": {
             "relayGpio0": "24",
             "relayType0": "normal",
