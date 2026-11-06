@@ -24,7 +24,7 @@ panel, or `set webTplUrl <url>` in the terminal. Empty = the default one.
     "category": "relay",
     "arch": "beken",
     "mcu": "BK7231N",
-    "image": "beken-bk7231n-nokey",
+    "image": "beken-matter",
     "link": "https://example.com/board-photos",
     "notes": "S1 is tied to N, flash it only without mains.",
     "settings": {
@@ -43,7 +43,7 @@ panel, or `set webTplUrl <url>` in the terminal. Empty = the default one.
 | `category` | optional | searched (`relay`, `switch`, `plug` ...) |
 | `arch` | required | `esp8266`, `esp32` or `beken`, the entry is only listed on that chip |
 | `mcu` | optional | the chip as the device reports it (`BK7231N`, `BK7231T` ...), the entry is only listed on that chip. Leave it out for ESP8266 / ESP32, ESP32 devices report the chip revision |
-| `image` | optional | firmware image / build the board needs (e.g. `beken-bk7231n`, `beken-bk7231n-nokey`), shown in the results and in the *Apply* confirmation. The device cannot tell which image it runs, so it is not checked |
+| `image` | optional | firmware image / build the board needs (e.g. `beken-matter`, `esp8266-1m`, `esp8266-1m-sensor`), shown in the results and in the *Apply* confirmation. The device cannot tell which image it runs, so it is not checked |
 | `link` | optional | page of the board, the `[github]` tag becomes a link |
 | `notes` | optional | shown in the *Apply* confirmation and as the tooltip of the result |
 | `settings` | required | ESPurna settings, key → value, **values are strings** |

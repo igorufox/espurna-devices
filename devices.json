@@ -6,7 +6,7 @@
         "arch": "beken",
         "mcu": "BK7231N",
         "image": "beken-matter",
-        "notes": "433 MHz receiver data on P26, decoded by rc-switch (in the beken-bk7231n image). P6 is the 'total' (all on / off) button of the stock firmware. Verified on real hardware.",
+        "notes": "433 MHz receiver data on P26, decoded by rc-switch (in the beken-matter image). P6 is the 'total' (all on / off) button of the stock firmware. Verified on real hardware.",
         "settings": {
             "relayGpio0": "24",
             "relayType0": "normal",
@@ -94,7 +94,7 @@
         "arch": "beken",
         "mcu": "BK7231N",
         "image": "beken-matter",
-        "notes": "BK7231M: flash not encrypted (zero key) and the 4 MiB bootloader layout, needs the beken-bk7231n-nokey image. S1 is tied to N (non-isolated): flash it only without mains. K1 = P7 controls the relay, S1/S2 terminals = P26 toggle the dummy relay (relay 1, counted from 0), a second wall switch on the P21 test pad (not a module pin, through 1-4.7 kOhm to S1) toggles the relay. Verified on real hardware.",
+        "notes": "BK7231M: flash not encrypted (zero key) and the 4 MiB bootloader layout, the beken-matter image detects it (first flash: espurna-beken-initial-quectel.uf2). S1 is tied to N (non-isolated): flash it only without mains. K1 = P7 controls the relay, S1/S2 terminals = P26 toggle the dummy relay (relay 1, counted from 0), a second wall switch on the P21 test pad (not a module pin, through 1-4.7 kOhm to S1) toggles the relay. Verified on real hardware.",
         "settings": {
             "relayGpio0": "24",
             "relayType0": "normal",
@@ -2773,7 +2773,7 @@
         "category": "misc",
         "arch": "esp8266",
         "mcu": "ESP8266",
-        "image": "esp8266-1m-sensor",
+        "image": "esp8266-1m",
         "notes": "Generated from hardware.h ITEAD_SONOFF_RFBRIDGE. Build env: itead-sonoff-rfbridge. Not verified on hardware.",
         "settings": {
             "relayDummy": "8",
@@ -2798,7 +2798,7 @@
         "category": "misc",
         "arch": "esp8266",
         "mcu": "ESP8266",
-        "image": "esp8266-1m-sensor",
+        "image": "esp8266-1m",
         "notes": "Generated from hardware.h ITEAD_SONOFF_RFBRIDGE with -DRFB_PROVIDER=RFB_PROVIDER_RCSWITCH. Build env: itead-sonoff-rfbridge-direct. Not verified on hardware.",
         "settings": {
             "relayDummy": "8",
@@ -3610,7 +3610,7 @@
         "arch": "esp8266",
         "mcu": "ESP8266",
         "image": "esp8266-1m-light",
-        "notes": "Generated from hardware.h MAGICHOME_ZJ_WFMN_B_11. Build env: magichome-zj-wfmn-b-11. Needs both esp8266-1m-light and esp8266-1m-sensor: on esp8266-1m-light the RF 433 MHz do not work. Not verified on hardware.",
+        "notes": "Generated from hardware.h MAGICHOME_ZJ_WFMN_B_11. Build env: magichome-zj-wfmn-b-11. Needs more than one 1 MB image: on esp8266-1m-light the RF 433 MHz do not work (all of it: esp8266-4m). Not verified on hardware.",
         "settings": {
             "relayProv0": "light-state",
             "ledGpio0": "2",
@@ -4116,7 +4116,7 @@
         "arch": "esp8266",
         "mcu": "ESP8266",
         "image": "esp8266-1m-sensor",
-        "notes": "Generated from hardware.h PILOTAK_ESP_DIN_V1. Build env: pilotak-esp-din-v1. Not verified on hardware.",
+        "notes": "Generated from hardware.h PILOTAK_ESP_DIN_V1. Build env: pilotak-esp-din-v1. Needs more than one 1 MB image: on esp8266-1m-sensor the RF 433 MHz do not work (all of it: esp8266-4m). Not verified on hardware.",
         "settings": {
             "relayGpio0": "4",
             "relayType0": "normal",
@@ -4209,7 +4209,7 @@
         "arch": "esp8266",
         "mcu": "ESP8266",
         "image": "esp8266-1m-light",
-        "notes": "Generated from hardware.h SMARTLIFE_MINI_SMART_SOCKET. Build env: smartlife-mini-smart-socket. Needs both esp8266-1m-light and esp8266-1m-sensor: on esp8266-1m-light the sensors do not work. Not verified on hardware.",
+        "notes": "Generated from hardware.h SMARTLIFE_MINI_SMART_SOCKET. Build env: smartlife-mini-smart-socket. Needs more than one 1 MB image: on esp8266-1m-light the sensors do not work (all of it: esp8266-4m). Not verified on hardware.",
         "settings": {
             "relayProv0": "light-state",
             "relayGpio1": "15",
